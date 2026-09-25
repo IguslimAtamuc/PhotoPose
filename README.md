@@ -4,7 +4,7 @@
 
 PhotoPose is an installable web app (PWA) built with React + TypeScript. It runs full-screen on iPhone once added to the Home Screen, works offline after the first visit, and analyses photos **on-device** (photos never leave the phone).
 
-> Live app: **https://GITHUB_USER.github.io/PhotoPose/**
+> Live app: **https://iguslimatamuc.github.io/PhotoPose/**
 
 ---
 
