@@ -1,0 +1,62 @@
+.favorites__count {
+  margin-bottom: 12px;
+}
+.fav-grid {
+  list-style: none;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+@media (min-width: 520px) {
+  .fav-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.fav-card {
+  position: relative;
+  border-radius: var(--r-lg);
+  overflow: hidden;
+  background: var(--surface);
+  animation: screen-in var(--dur) var(--ease-out) both;
+}
+.fav-card.is-editing {
+  animation: wiggle 0.3s ease-in-out infinite alternate;
+}
+@keyframes wiggle {
+  from {
+    transform: rotate(-0.8deg);
+  }
+  to {
+    transform: rotate(0.8deg);
+  }
+}
+.fav-card__link {
+  display: block;
+}
+.fav-card__title {
+  display: block;
+  padding: 10px 12px 12px;
+  font-weight: 650;
+  font-size: var(--fs-sm);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.fav-card__start,
+.fav-card__remove {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #fff;
+  background: var(--accent-grad);
+  box-shadow: var(--shadow-1);
+}
+.fav-card__remove {
+  background: var(--danger);
+}

@@ -1,0 +1,7 @@
+node_modules
+dist
+public/mediapipe
+public/models
+e2e-output
+*.log
+.DS_Store

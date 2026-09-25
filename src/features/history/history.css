@@ -1,0 +1,101 @@
+.stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+  margin: 4px 0 14px;
+}
+.stats div,
+.profile-stats > * {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 14px 8px;
+  border-radius: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.stats strong,
+.profile-stats strong {
+  font-size: var(--fs-xl);
+  font-weight: 750;
+  letter-spacing: -0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.stats span,
+.profile-stats span {
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+}
+.history__sort {
+  margin-bottom: 12px;
+}
+.history__list {
+  list-style: none;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.history-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px;
+  min-height: 88px;
+  border-radius: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+}
+.history-row:active {
+  background: var(--surface-2);
+}
+.history-row__img {
+  width: 60px;
+  height: 80px;
+  border-radius: 12px;
+  object-fit: cover;
+  background: var(--surface-2);
+  flex: none;
+}
+.history-row__text {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.history-row__text strong {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.history-row__text span {
+  font-size: var(--fs-xs);
+  color: var(--text-3);
+}
+.history-row__pending {
+  color: var(--warning) !important;
+}
+.history-row__score {
+  flex: none;
+  min-width: 56px;
+  height: 36px;
+  padding: 0 10px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  font-weight: 750;
+  font-variant-numeric: tabular-nums;
+}
+.history-row__score.is-good {
+  color: var(--success);
+  background: color-mix(in srgb, var(--success) 14%, transparent);
+}
+.history-row__score.is-ok {
+  color: var(--warning);
+  background: color-mix(in srgb, var(--warning) 14%, transparent);
+}
+.history-row__score.is-low {
+  color: var(--danger);
+  background: color-mix(in srgb, var(--danger) 14%, transparent);
+}
